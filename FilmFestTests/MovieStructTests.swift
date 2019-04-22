@@ -21,6 +21,33 @@ class MovieStructTests: XCTestCase {
         super.tearDown()
     }
     
+    /**
+     * Business Rule: Each Movie has
+     *  required "title" string property
+     *  optional "releaseDate" string property (default value: nil)
+     *  required "shown" bool property (default value: false)
+     */
+    
+    // MARK: Create a Movie with a required title property
+    func testInit_MovieWithTitle() {
+        let testMovie = Movie(title: "Generic Blockbuster")
+        
+        XCTAssertNotNil(testMovie)
+        XCTAssertEqual(testMovie.title, "Generic Blockbuster")
+        XCTAssertNil(testMovie.releaseDate)
+        XCTAssertEqual(testMovie.shown, false)
+    }
+    // MARK: Create a Movie with it's optional releaseDate property
+    func testInit_SetMovieTitleAndReleaseDate() {
+        let testMovie = Movie(title: "SciFi Anime", releaseDate: "1987")
+        
+        XCTAssertNotNil(testMovie)
+        XCTAssertEqual(testMovie.title, "SciFi Anime")
+        XCTAssertEqual(testMovie.releaseDate, "1987")
+        XCTAssertEqual(testMovie.shown, false)
+    }
+    
+    
     
     
 }

@@ -13,6 +13,7 @@
 		8FD5462B200D1A960046A5C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD5462A200D1A960046A5C4 /* Assets.xcassets */; };
 		8FD5462E200D1A960046A5C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD5462C200D1A960046A5C4 /* LaunchScreen.storyboard */; };
 		8FD54644200D1C920046A5C4 /* MovieStructTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD54643200D1C920046A5C4 /* MovieStructTests.swift */; };
+		D1B996F0226E218700EB2307 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B996EF226E218700EB2307 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8FD54634200D1A960046A5C4 /* FilmFestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmFestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD5463A200D1A960046A5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FD54643200D1C920046A5C4 /* MovieStructTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStructTests.swift; sourceTree = "<group>"; };
+		D1B996EF226E218700EB2307 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		8FD54622200D1A960046A5C4 /* FilmFest */ = {
 			isa = PBXGroup;
 			children = (
+				D1B996EE226E20B300EB2307 /* Models */,
 				8FD54623200D1A960046A5C4 /* AppDelegate.swift */,
 				8FD54625200D1A960046A5C4 /* ViewController.swift */,
 				8FD54627200D1A960046A5C4 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				8FD54643200D1C920046A5C4 /* MovieStructTests.swift */,
 			);
 			path = FilmFestTests;
+			sourceTree = "<group>";
+		};
+		D1B996EE226E20B300EB2307 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1B996EF226E218700EB2307 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 			files = (
 				8FD54626200D1A960046A5C4 /* ViewController.swift in Sources */,
 				8FD54624200D1A960046A5C4 /* AppDelegate.swift in Sources */,
+				D1B996F0226E218700EB2307 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
