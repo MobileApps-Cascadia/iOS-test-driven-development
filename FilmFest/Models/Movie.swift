@@ -11,6 +11,7 @@ import Foundation
 struct Movie {
     let title: String
     let releaseDate: String?
+    var shown:Bool = true
     
     init(title: String, releaseDate: String? = nil) {
         self.title = title
