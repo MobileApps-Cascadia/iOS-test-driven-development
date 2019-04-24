@@ -41,12 +41,18 @@ class MovieRepoTest: XCTestCase {
     
     func testAdd_RepositoryCount_IsOne()
     {
-        //sut.add(movie: scifiMovie)
+        sut.add(newMovie: scifiMovie)
         XCTAssertEqual(sut.count, 1)
     }
     
     //TODO : Write a test for the get functionality
     //      to show it returns the expected movie
-
+    func test_showMovie() {
+        sut.add(newMovie: scifiMovie)
+        
+        XCTAssertEqual(sut.get(identifier: 0)?.title, scifiMovie.title)
+        
+      
+    }
 
 }

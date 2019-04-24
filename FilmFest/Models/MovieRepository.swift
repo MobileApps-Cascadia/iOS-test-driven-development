@@ -9,14 +9,36 @@
 import Foundation
 // TODO : Add to the protocol as dictated by the Test
 protocol MovieRepository {
-    var count:Int { get }
-    //func get( identifier:Int ) -> Movie?
+    var count:Int{get}
+   
+    func add(newMovie: Movie)
+    
+    func get( identifier:Int ) -> Movie?
 }
 
 //TODO : Be sure the repo conforms to the MovieRepository protocol
 public class MovieDataRepository:MovieRepository{
+    func get(identifier: Int) -> Movie? {
+      return movieData[identifier]
+    }
+    
+   
+    
+    var count: Int {
+        get
+        {
+           return movieData.count
+        }
+        
+       
+    }
+    
+    func add(newMovie: Movie) {
+        
+        movieData.append(newMovie)
+    }
+    
     private var movieData = [Movie]()
     
-    var count: Int { return 0 }
-    
+  
 }
