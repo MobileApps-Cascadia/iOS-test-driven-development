@@ -58,5 +58,4 @@ class MovieStructTests: XCTestCase {
         XCTAssertEqual(testMovie.shown, true)
     }
 
-
 }
