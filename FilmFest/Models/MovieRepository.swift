@@ -10,6 +10,7 @@ import Foundation
 // TODO : Add to the protocol as dictated by the Test
 protocol MovieRepository {
     var count:Int { get }
+    func add(movie: Movie)
     //func get( identifier:Int ) -> Movie?
 }
 
@@ -17,6 +18,10 @@ protocol MovieRepository {
 public class MovieDataRepository:MovieRepository{
     private var movieData = [Movie]()
     
-    var count: Int { return 0 }
+    var count: Int { return movieData.count }
+    
+    func add(movie:  Movie) {
+        movieData.append(movie)
+    }
     
 }
