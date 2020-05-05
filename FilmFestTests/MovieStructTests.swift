@@ -50,7 +50,14 @@ class MovieStructTests: XCTestCase {
     
     // TODO: Test a Movie that has already been shown
     func testInit_SetMovieAlreadyWatched(){
-        
+        let testMovie = Movie(title: "The Watched", shown: true)
+
+        XCTAssertNotNil(testMovie)
+        XCTAssertEqual(testMovie.title, "The Watched")
+        XCTAssertNil(testMovie.releaseDate)
+        XCTAssertEqual(testMovie.shown, true)
+
+
     }
 
 
