@@ -31,7 +31,7 @@ class MovieStructTests: XCTestCase {
     
     // Test a Movie with a required title property
     func testInit_MovieWithTitle() {
-        let testMovie = Movie(title: "Generic Blockbuster")
+        let testMovie = Movie(title: "Generic Blockbuster", shown:false)
         
         XCTAssertNotNil(testMovie)
         XCTAssertEqual(testMovie.title, "Generic Blockbuster")
@@ -40,7 +40,7 @@ class MovieStructTests: XCTestCase {
     }
     // Test a Movie with it's optional releaseDate property
     func testInit_SetMovieTitleAndReleaseDate() {
-        let testMovie = Movie(title: "SciFi Anime", releaseDate: "1987")
+        let testMovie = Movie(title: "SciFi Anime", releaseDate: "1987", shown:false)
         
         XCTAssertNotNil(testMovie)
         XCTAssertEqual(testMovie.title, "SciFi Anime")
@@ -50,8 +50,11 @@ class MovieStructTests: XCTestCase {
     
     // TODO: Test a Movie that has already been shown
     func testInit_SetMovieAlreadyWatched(){
+        let testMovie = Movie(title: "12 Monkeys", shown:true)
+        
+        XCTAssertNotNil(testMovie)
+        XCTAssertEqual(testMovie.shown, true)
         
     }
-
-
+    
 }

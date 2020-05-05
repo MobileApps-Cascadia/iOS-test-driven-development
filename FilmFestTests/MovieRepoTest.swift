@@ -11,9 +11,9 @@ import XCTest
 class MovieRepoTest: XCTestCase {
     var sut: MovieRepository!
     
-    let scifiMovie = Movie(title: "Sci-Fi")
-    let arthouseMovie = Movie(title: "Arthouse Drama")
-    let actionMovie = Movie(title: "Action/Adventure")
+    let scifiMovie = Movie(title: "Sci-Fi", shown:false)
+    let arthouseMovie = Movie(title: "Arthouse Drama", shown:false)
+    let actionMovie = Movie(title: "Action/Adventure", shown:false)
 
 
     override func setUp() {
@@ -41,12 +41,28 @@ class MovieRepoTest: XCTestCase {
     
     func testAdd_RepositoryCount_IsOne()
     {
-        //sut.add(movie: scifiMovie)
+        sut.add(movie: scifiMovie)
         XCTAssertEqual(sut.count, 1)
     }
     
     //TODO : Write a test for the get functionality
     //      to show it returns the expected movie
+    func testQuery_ReturnedMovieIsCorrect() {
+        sut.add(movie: scifiMovie)
+        sut.add(movie: arthouseMovie)
+        sut.add(movie: actionMovie)
 
+        let firstMovie = sut.get(identifier: 0)
+        XCTAssertNotNil(firstMovie)
+        XCTAssertEqual(firstMovie, scifiMovie)
+
+        let secondMovie = sut.get(identifier: 1)
+        XCTAssertNotNil(secondMovie)
+        XCTAssertEqual(secondMovie, arthouseMovie)
+
+        let thirdMovie = sut.get(identifier: 2)
+        XCTAssertNotNil(thirdMovie)
+        XCTAssertEqual(thirdMovie, actionMovie)
+    }
 
 }
