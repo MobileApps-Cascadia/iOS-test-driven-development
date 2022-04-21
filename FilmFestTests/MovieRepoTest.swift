@@ -22,6 +22,7 @@ class MovieRepoTest: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
     // MARK: Initial Value Test
@@ -41,12 +42,15 @@ class MovieRepoTest: XCTestCase {
     
     func testAdd_RepositoryCount_IsOne()
     {
-        //sut.add(movie: scifiMovie)
+        sut.add(movie: scifiMovie)
         XCTAssertEqual(sut.count, 1)
     }
     
     //TODO : Write a test for the get functionality
     //      to show it returns the expected movie
-
+    func testGet_MovieTitle(){
+        sut.add(movie: arthouseMovie)
+        XCTAssertEqual(sut.get(identifier: 0),arthouseMovie)
+    }
 
 }
