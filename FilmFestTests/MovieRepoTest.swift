@@ -2,7 +2,7 @@
 //  MovieRepoTest.swift
 //  FilmFestTests
 //
-//  Created by Brian Bansenauer on 4/22/19.
+//  Created by Shahin N
 //  Copyright © 2019 Author. All rights reserved.
 //
 
@@ -41,12 +41,16 @@ class MovieRepoTest: XCTestCase {
     
     func testAdd_RepositoryCount_IsOne()
     {
-        //sut.add(movie: scifiMovie)
+        sut.add(movie: scifiMovie)
         XCTAssertEqual(sut.count, 1)
     }
     
-    //TODO : Write a test for the get functionality
+    //Write a test for the get functionality
     //      to show it returns the expected movie
+    func testGet_MovieTitle() {
+        sut.add(movie: arthouseMovie)
+        XCTAssertEqual(sut.get(identifier: 0), arthouseMovie)
+    }
 
-
+    
 }
