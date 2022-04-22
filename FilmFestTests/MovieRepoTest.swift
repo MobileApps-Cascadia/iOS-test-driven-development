@@ -17,12 +17,10 @@ class MovieRepoTest: XCTestCase {
     let arthouseMovie = Movie(title: "Arthouse Drama")
     let actionMovie = Movie(title: "Action/Adventure")
     
-    // the setUp() method is going to run before any test methods is executed
     override func setUp() {
         sut = MovieDataRepository()
     }
     
-    // the tearDown() method needs will be run after every test method is executed
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }

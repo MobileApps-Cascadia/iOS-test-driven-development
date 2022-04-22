@@ -11,9 +11,9 @@ import Foundation
 struct Movie {
     let title: String
     let releaseDate: String?
-    var shown:Bool
+    var shown:Bool = false
     
-    init(title: String, releaseDate: String? = nil, shown: Bool = false) {  // init is the constructor equivalence in java
+    init(title: String, releaseDate: String? = nil, shown: Bool = false) {
         self.title = title
         self.releaseDate = releaseDate
         self.shown = shown
